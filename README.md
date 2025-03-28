@@ -23,12 +23,12 @@ Get-Command -Module DiskToAzureBlobStorage
 ## Setup
 1. Create an Azure Storage Account and a container named `sas-token`.
 2. In that container, create a blob named `GUID.txt` (e.g. output from  `New-Guid` in PowerShell).
-3. Paste your SAS token into that blob file. It should be the raw token string starting with `sv=` (do not include `https://...` or ´BlobEndpoint=´).
+3. Paste your SAS token into that blob file. It should be the raw token string starting with `sv=` (do not include `https://...` or `BlobEndpoint=`).
   - **SAS token requirements**:
-    - Allowed services: Blob
-    - Allowed resource types: Service, Container, Object
-    - Allowed permissions: Read, Write, Create, List, Add
-    - Allowed blob index permissions: None
+    - **Allowed services**: `Blob`
+    - **Allowed resource types**: `Service`, `Container`, `Object`
+    - **Allowed permissions**: `Read`, `Write`, `Create`, `List`, `Add`
+    - **Allowed blob index permissions**: `None`
 
 ## Parameters
 - [string] `-storageAccountName`: Name of the Azure Storage Account to upload to.
